@@ -3,8 +3,8 @@
     export let date
     export let description
     export let author
-    const authorDp  = `/static/images/${author}.png`
-    const authorProfileURL = `/author/${author}`
+    const authorDp  = `/images/${author}.png` // relative to index.html
+    // const authorProfileURL = `/author/${author}`
     export let categories
     const uniqueCategories = [...new Set(categories)]
 
@@ -21,7 +21,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <div class="mr-2">
       <img class="rounded-full w-16 h-16" src={authorDp} alt="Profile picture"/>  
-      <a href={authorProfileURL}> <p class="justify-center w-16 leading-tight text-sm text-center">{author}</p> </a>
+      <a href=#> <p class="justify-center w-16 leading-tight text-sm text-center">{author}</p> </a>
     </div>
     <div>
       <h1>{title}</h1>
