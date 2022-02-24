@@ -13,7 +13,7 @@
 
 <svelte:head>
   <title>{title}</title>
-  <meta tag="description" content={description}>
+  <meta name="description" content={description}>
 </svelte:head>
 
 <div class="container mx-auto">
