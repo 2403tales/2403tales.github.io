@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<link rel="icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../css/prism.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Libraries v/s Frameworks</title><meta tag="description" content="An article explaining the difference between libraries and framework. The confusion is very common in software engineering domain. This article attempts to clarify the differences." data-svelte="svelte-157bvm5">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-44c81eee.css">
+	<link rel="modulepreload" href="/_app/start-24b0cf67.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-a75509f8.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-a47fff3a.js">
+	<link rel="modulepreload" href="/_app/pages/blog/library-vs-framework.md-44959ca9.js">
+	</head>
+	<body>
+		<div>
+
+
+
+
+<div class="container mx-auto"><div class="flex pt-10 pb-10 font-bold">
+    <div class="mr-2"><img class="rounded-full w-16 h-16" src="/images/Prakash Rai.png" alt="Profile picture">  
+      <a href="#"><p class="justify-center w-16 leading-tight text-sm text-center">Prakash Rai</p></a></div>
+    <div><h1>Libraries v/s Frameworks</h1>
+      <div class="flex text-sm mt-2"><p class="text-gray-400 mr-3 mt-1">2022-02-24</p>
+        <p class="p-1 ml-2 bg-emerald-500 text-black rounded-xl">software-engineering</p></div></div></div>
+  <p>I have been professionally developing software for 3 years now. And never ever I have worked on a project which was complete in itself. Directly or indirectly, there was a dependency on some code written by some kind OSS developer(s).</p>
+<p>While using those dependencies, one thing which intrigued me in my initial days was “Why do people call X a library, and Y a framework?” This post is the answer to that question.</p>
+<p>While reading this post, it’ll be helpful if you keep a framework and a library in mind. If you’re a python developer, I’ll suggest <code>flask</code> as a framework and <code>requests</code> as a library. I’ll give examples in Python, wherever required.</p>
+<h2>Example Code</h2>
+<p>Let’s define a function that fetches the latest time from a given server.</p>
+<h2>Library</h2>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">import</span> requests
+
+<span class="token keyword">def</span> <span class="token function">get_latest_server_time</span><span class="token punctuation">(</span>server_url<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    resp <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>server_url<span class="token punctuation">)</span>
+    <span class="token keyword">if</span> resp<span class="token punctuation">.</span>status_code <span class="token operator">==</span> <span class="token number">200</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> resp<span class="token punctuation">.</span>json<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">raise</span> Exception<span class="token punctuation">(</span><span class="token string">'Unable to get latest time from server'</span><span class="token punctuation">)</span>
+</code><!-- HTML_TAG_END --></pre>
+<p>Simple code, right? Your function utilizes <code>requests</code> “library”, which provides a super-helpful method <code>get</code>, which abstracts the details like creating a connection to a server, sending the request, unmarshalling the response, etc.</p>
+<h2>Framework</h2>
+<p>Let’s define a simple API endpoint that returns “Hello World”</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> flask <span class="token keyword">import</span> Flask
+
+app <span class="token operator">=</span> Flask<span class="token punctuation">(</span>__name__<span class="token punctuation">)</span>
+
+<span class="token decorator annotation punctuation">@app<span class="token punctuation">.</span>route</span><span class="token punctuation">(</span><span class="token string">"/hello"</span><span class="token punctuation">)</span>
+<span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> <span class="token string">"Hello World"</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code><!-- HTML_TAG_END --></pre>
+<p>Here, we defined a function <code>hello_world</code> and then instructed the <code>flask</code> to call that function if any request hits at the <code>/hello</code> endpoint. Simple enough? Cool, let’s move to the crux of the article</p>
+<h2>Difference b/w library and framework</h2>
+<p>Examine the <code>get_latest_server_time</code> function we defined in the <code>Library</code> example. You’re calling the <code>requests.get</code> function. It does something under the hood and returns you a <code>Response</code> object. Then, you process the <code>Response</code> object and take appropriate action. The key thing to note here is</p>
+<blockquote><p>In case of a library, you are controlling the flow of execution. You are responsible for invoking the code written by some 3rd party.</p></blockquote>
+<p>Now, let’s move to our framework example. Let’s assume that we started our API server locally, and it is running on port <code>5000</code>. What happens when you do the following curl?</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python">$ curl <span class="token operator">-</span>X GET http<span class="token punctuation">:</span><span class="token operator">//</span><span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">5000</span><span class="token operator">/</span>hello
+</code><!-- HTML_TAG_END --></pre>
+<p>You’ll get the following response</p>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python">Hello World
+</code><!-- HTML_TAG_END --></pre>
+<p>Let’s walk through step-by-step how we got the response.</p>
+<ul><li>We started a server by calling <code>app.run()</code></li>
+<li>The server is listening to any request which is hitting at <code>http://127.0.0.1:5000/</code></li>
+<li>If someone requests <code>http://127.0.0.1:5000/hello</code>, the server executes the <code>hello_world</code> method, defined by us.</li>
+<li>Finally, the server wraps the output of <code>hello_world</code> into a <code>Response</code> object and sends it to whoever made that request.</li></ul>
+<p>The key thing to note here is</p>
+<blockquote><p>In case of a framework, the flask server is controlling the flow of execution. It is responsible for invoking the code written by you.</p></blockquote>
+<p>The moment <code>python</code> executes <code>app.run()</code> in our example, the flow of control is transferred to  <code>flask</code>. And after that, <code>flask</code> is responsible for executing the code written by us.</p>
+<blockquote><p>And that folks, is the difference between a framework and a library. <strong>It’s all about the flow of control.</strong></p></blockquote>
+<p>It doesn’t matter which language you use, the above-mentioned distinction will always hold.</p>
+<h2>Some technical tidbits</h2>
+<ul><li>The technical term for the transfer of flow control to framework is called <strong>Inversion of Control</strong>. It is a very important principle in software engineering and demands an article of its own. I’ll write one describing it soon.</li>
+<li>This may be controversial, but if you think about it, all Operating Systems are frameworks :)</li></ul></div>
+
+
+		<script type="module" data-hydrate="1pygnmp">
+		import { start } from "/_app/start-24b0cf67.js";
+		start({
+			target: document.querySelector('[data-hydrate="1pygnmp"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-a47fff3a.js"),
+						import("/_app/pages/blog/library-vs-framework.md-44959ca9.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
