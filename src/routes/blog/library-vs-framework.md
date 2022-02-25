@@ -3,7 +3,7 @@ title: Libraries v/s Frameworks
 date: "24 February, 2022"
 categories: ["software-engineering"]
 description: "An article explaining the difference between libraries and framework. The confusion is very common in software engineering domain. This article attempts to clarify the differences."
-author: "Prakash Rai"
+author: "Prakash"
 ---
 
 
