@@ -1,7 +1,5 @@
 <script context="module">
     const allPosts = import.meta.globEager('/src/routes/posts/*.md')
-    console.log('Hwllo')
-    console.log('Eorld')
 </script>
 <script>
     import {getUrlFromName} from '../utils'
