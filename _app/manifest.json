@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-632f5712.js",
+    "file": "start-ed8fad94.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,7 +16,7 @@
       "src/routes/categories/data/index.svelte",
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
-      "_library-vs-framework-ece0e461.js"
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -41,63 +41,68 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-95e417b4.js",
+    "file": "pages/index.svelte-401cdf75.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
+      "_library-vs-framework-b9048154.js",
       "_vendor-b29efe4c.js"
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-a5bf2bf9.js",
+    "file": "pages/categories/bioinformatics/index.svelte-5df7c9ac.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
-      "_vendor-b29efe4c.js"
+      "_vendor-b29efe4c.js",
+      "_index-9a0a4afb.js",
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-ba5da910.js",
+    "file": "pages/categories/engineering/index.svelte-5f2e6599.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
-      "_vendor-b29efe4c.js"
+      "_vendor-b29efe4c.js",
+      "_index-9a0a4afb.js",
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-dee925f8.js",
+    "file": "pages/categories/shorts/index.svelte-69df4ebd.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
-      "_vendor-b29efe4c.js"
+      "_vendor-b29efe4c.js",
+      "_index-9a0a4afb.js",
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-2a84324c.js",
+    "file": "pages/categories/data/index.svelte-21c7acbd.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
-      "_vendor-b29efe4c.js"
+      "_vendor-b29efe4c.js",
+      "_index-9a0a4afb.js",
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-705f13fd.js",
+    "file": "pages/categories/misc/index.svelte-fa601876.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_library-vs-framework-ece0e461.js",
-      "_vendor-b29efe4c.js"
+      "_vendor-b29efe4c.js",
+      "_index-9a0a4afb.js",
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -110,21 +115,28 @@
     ]
   },
   "src/routes/posts/library-vs-framework.md": {
-    "file": "pages/posts/library-vs-framework.md-4c0ffe02.js",
+    "file": "pages/posts/library-vs-framework.md-11a03d83.js",
     "src": "src/routes/posts/library-vs-framework.md",
     "isEntry": true,
     "imports": [
       "_vendor-b29efe4c.js",
-      "_library-vs-framework-ece0e461.js"
+      "_library-vs-framework-b9048154.js"
     ]
   },
   "_vendor-b29efe4c.js": {
     "file": "chunks/vendor-b29efe4c.js"
   },
-  "_library-vs-framework-ece0e461.js": {
-    "file": "chunks/library-vs-framework-ece0e461.js",
+  "_library-vs-framework-b9048154.js": {
+    "file": "chunks/library-vs-framework-b9048154.js",
     "isDynamicEntry": true,
     "imports": [
+      "_vendor-b29efe4c.js"
+    ]
+  },
+  "_index-9a0a4afb.js": {
+    "file": "chunks/index-9a0a4afb.js",
+    "imports": [
+      "_library-vs-framework-b9048154.js",
       "_vendor-b29efe4c.js"
     ]
   }
