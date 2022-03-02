@@ -1,19 +1,21 @@
 <svelte:head>
-    <title>Home | 2403tales</title>
+    <title>Short Stories | 2403tales</title>
 </svelte:head>
-<script >
+<script>
     const getUrlFromName = (name) => {
         return name.replace('.md', '').replace('../', '/')
     }
-
-    const allPosts = import.meta.globEager('./posts/*.md')
+    const tags = ['shorts']
+    const allPosts = import.meta.globEager('../../posts/*.md')
     let allPostData = []
     for (let path in allPosts) {
         const post = allPosts[path];
-        allPostData.push({...post.metadata, link: getUrlFromName(path)})
+        tags.forEach(tag => {
+            if(post.metadata.categories.includes(tag))
+                allPostData.push({...post.metadata, link: getUrlFromName(path)})
+        })
     }
 </script>
-<h1 class="text-3xl">Tales of Engineering</h1>
 <ul>
     {#each allPostData as post}
         <li>

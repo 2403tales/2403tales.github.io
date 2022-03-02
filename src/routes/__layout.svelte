@@ -8,22 +8,22 @@
           <span class="self-center text-neutral-900 no-underline text-lg font-bold whitespace-nowrap font-mono">2403tales</span>
       </a>
       <div class="grow text-right font-semibold whitespace-nowrap font-mono space-x-4 hidden md:block">
-        <a href="#">
-            <span class="text-neutral-900 hover:text-neutral-600">Hacks</span>
+        <a href="/categories/shorts">
+            <span class="text-neutral-900 hover:text-neutral-600">Shorts</span>
           </a>
-          <a href="/engineering">
+          <a href="/categories/engineering">
             <span class="text-neutral-900 hover:text-neutral-600">Engineering</span>
           </a>
-          <a href="#">
+          <a href="/categories/data">
             <span class="text-neutral-900 hover:text-neutral-600">Data</span>
           </a>
-          <a href="#">
+          <a href="/categories/bioinformatics">
             <span class="text-neutral-900 hover:text-neutral-600">Bioinformatics</span>
           </a>
-          <a href="#">
+          <a href="/categories/misc">
             <span class="text-neutral-900 hover:text-neutral-600">Misc</span>
           </a>
-          <a href="#">
+          <a href="/about">
             <span class="text-neutral-900 hover:text-neutral-600">whoami</span>
           </a>
       </div>
@@ -40,4 +40,6 @@
     </div>
   </nav>
 
-<slot />
+<div class="container mx-auto mt-5">
+  <slot />
+</div>
