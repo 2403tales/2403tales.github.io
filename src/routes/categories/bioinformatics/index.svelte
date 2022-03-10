@@ -5,5 +5,5 @@
     import PostList from "$lib/PostList/index.svelte"
 </script>
 
-<h1>Bioinformatics Rants</h1>
+<h1>Bioinformatics Stories</h1>
 <PostList tagList={['bioinformatics']} />

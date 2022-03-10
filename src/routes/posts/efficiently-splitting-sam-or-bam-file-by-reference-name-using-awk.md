@@ -2,7 +2,7 @@
 series: "Leveraging GNU Core utils in bioinfornmatics"
 title: "Efficiently Splitting SAM/BAM file by reference name using awk"
 date: "11 March, 2022"
-categories: ["GNU Tools", "shorts", "bioinfornmatics"]
+categories: ["GNU Tools", "shorts", "bioinformatics"]
 description: "An article explaining how to efficiently split a SAM/BAM file using awk"
 author: "Prakash"
 ---
