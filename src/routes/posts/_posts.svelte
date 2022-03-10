@@ -16,9 +16,8 @@
   <meta name="description" content={description}>
 </svelte:head>
 
-<div class="container md:mx-auto px-4">
-  <div class="flex pt-5 pb-20 font-bold">
-    
+<div class="container md:mx-auto px-4 pb-10">
+  <div class="pt-5 pb-5 font-bold">
     <div>
       <div class="mr-2 flex">
         <div>

@@ -1,5 +1,5 @@
 <svelte:head> 
-    <title>Data Tales | 2403tales</title>
+    <title>Bioinformatics Tales | 2403tales</title>
 </svelte:head>
 <script>
     import PostList from "$lib/PostList/index.svelte"
