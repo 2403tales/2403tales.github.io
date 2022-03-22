@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../css/prism.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>Leveraging encodings for speeding up grep</title><meta name="description" content="An article explaining how to leverage encodings to improve grep performance by over 500%" data-svelte="svelte-t80vtw">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-09167bea.css">
+	<link rel="modulepreload" href="/_app/start-42637310.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
+	<link rel="modulepreload" href="/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-378277f8.js">
+	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
+	<link rel="modulepreload" href="/_app/chunks/leveraging-encodings-for-speeding-up-grep-8fa3adeb.js">
+	</head>
+	<body>
+		<div>
+
+
+<nav class="bg-emerald-500 text-neutral-900 px-2 sm:px-4 py-2 sticky top-0"><div class="container flex flex-wrap items-center mx-auto"><a href="/"><span class="self-center text-neutral-900 no-underline text-lg font-bold whitespace-nowrap font-mono">2403tales</span></a>
+      <div class="grow text-right font-semibold whitespace-nowrap font-mono space-x-4 hidden md:block"><a href="/categories/shorts"><span class="text-neutral-900 hover:text-neutral-600">Shorts</span></a>
+          <a href="/categories/engineering"><span class="text-neutral-900 hover:text-neutral-600">Engineering</span></a>
+          <a href="/categories/data"><span class="text-neutral-900 hover:text-neutral-600">Data</span></a>
+          <a href="/categories/bioinformatics"><span class="text-neutral-900 hover:text-neutral-600">Bioinformatics</span></a>
+          <a href="/categories/misc"><span class="text-neutral-900 hover:text-neutral-600">Misc</span></a>
+          <a href="/about"><span class="text-neutral-900 hover:text-neutral-600">whoami</span></a></div>
+      <div class="text-right grow md:hidden"><button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-neutral-900 md:hidden" aria-controls="mobile-menu-2" aria-expanded="false"><span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu"></div></div></div></nav>
+
+<div class="container mx-auto mt-5">
+
+<div class="container md:mx-auto px-4 pb-10"><div class="pt-5 pb-5 font-bold"><div><div class="mr-2 flex"><div>
+          <a href="#"><p class="justify-center w-16 leading-tight text-sm text-center">
+              <img class="rounded-full w-16 h-16" src="/images/Prakash.png" alt="Profile picture"></p></a></div>
+        <div class="ml-3 mb-3"><a href="#"><p>Prakash</p></a>
+          <p class="text-gray-400">21 March, 2022</p></div></div>
+      <h1>Leveraging encodings for speeding up grep</h1>
+      <div class="flex text-sm mt-2"><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">GNU Tools</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">bioinformatics</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">encodings</p></div></div></div>
+  <h1>Leveraging encodings to speedup grep</h1>
+<h2>Target Audience</h2>
+<ul><li>You know what a FASTA file looks like</li>
+<li>You know the <em>bits and bytes</em> of storage (pun intended 😛)</li></ul>
+<h2>TL;DR</h2>
+<p>Run </p>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">LC_ALL</span></span><span class="token operator">=</span>C</code><!-- HTML_TAG_END --></pre>
+<p>before running your grep statement. Based on your system settings, this might give you a speedup of <strong>&gt;500%.</strong></p>
+<h2>A quick intro to <code>grep</code></h2>
+<p><code>grep</code> is a GNU utility used for searching files for lines that match a given set of patterns. For example, if you wish to retrieve all the headers in a FASTA file, you can do</p>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">grep</span> ‘<span class="token operator">></span>’ in.fasta</code><!-- HTML_TAG_END --></pre>
+<p>This will retrieve all the lines that contain the character <code>&gt;</code>. Since all the FASTA headers start with <code>&gt;</code>, this will retrieve all the FASTA headers. </p>
+<p>Note that <code>&gt;</code> can’t occur anywhere else in the FASTA file, apart from the header. Hence, it is guaranteed that only headers will be returned. We can specify a better search pattern, which will restrict the search to return only the lines which start with <code>&gt;</code>, but that’s out of scope for this article.</p>
+<h2>A quick intro to encodings</h2>
+<p>Encodings are a way to represent characters in numbers so that they can be understood by a machine. For example, Assume you (arbitrarily) declare that</p>
+<ul><li><code>A</code> is represented as 65</li>
+<li><code>H</code> is represented as 72</li>
+<li><code>a</code> is represented as 97</li>
+<li><code>h</code> is represented as 104</li></ul>
+<p>Then, your computer will understand <code>HahA</code> as <code>72 97 104 65</code></p>
+<p>Note:</p>
+<ul><li>Spaces around numbers are just for illustrative purposes</li>
+<li>The computer will finally store the values in binary format, as it only understands <code>0s</code> and <code>1s</code>. How to calculate binary representation of a given integer is a topic for a separate day</li></ul>
+<h2>ASCII Encoding</h2>
+<p>ASCII is one of the simplest and most common encodings currently in use. It encodes 128 different characters i.e. assigns integer values to 128 different characters. </p>
+<p><a href="https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html" rel="nofollow">Click here to see the whole table</a></p>
+<p>In a nutshell,</p>
+<ul><li><code>A</code> is represented as 65, <code>B</code> as 66, <code>C</code> as 67 … <code>Z</code> as 90</li>
+<li><code>a</code> is represented as 97, <code>b</code> as 98, <code>c</code> as 99 … <code>z</code> as 122</li>
+<li><code>0</code> is represented as 48, <code>1</code> as 49 … <code>9</code> as 57</li>
+<li>Other numbers represent things like space, enter key, backspace, symbols (+, -, etc.) escape sequences (newlines, tabs, null character, etc).</li>
+<li>Every ASCII encoded character takes exactly 1 byte of memory.</li></ul>
+<h2>Unicode Character Set</h2>
+<p>If you’ve heard anything about encoding, then you must’ve heard about <code>Unicode</code>. The need for <code>Unicode</code> arose because <code>ASCII</code> wasn’t designed to handle more than 128 characters. </p>
+<p><code>ASCII</code> worked perfectly in the 60s and 70s as there were very few computers and even fewer groups using computers. But, with the advent of the internet, and the widespread adoption of computers in different parts of the world, encoding different character sets became a major requirement. For example, computers had no way of understanding Hindi characters like अ, आ, etc. We needed a way to encode them, and <code>Unicode</code> provided a way to do just that. It simply mapped a given character to some unique number.</p>
+<p><strong>Note</strong>: <code>Unicode</code> doesn’t contain every character from every language.</p>
+<h2>UTF-8 encoding</h2>
+<p>As mentioned above, <code>Unicode</code> just maps a character to a number. It does not specify how that number is stored in the computer. For example, let’s say we decide to </p>
+<ul><li>Represent <code>A</code> as 65</li>
+<li>Represent <code>आ</code> as 995.</li></ul>
+<p>Now, assuming a byte is an absolute unit of storage, You can store</p>
+<ul><li><code>A</code> using 1 byte and <code>आ</code> using 2 bytes. (As <code>65 &lt; 256</code>, and <code>256 &lt; 995 &lt; 256 * 256</code> )</li>
+<li>both using 2 bytes. In this case, you’ll waste 1 extra byte while storing A</li></ul>
+<p>The point of this example was to show that one Unicode character can be stored in multiple ways. </p>
+<blockquote><p>UTF-8 is one of the ways to store Unicode characters. It is designed to encode millions of characters, while ASCII only encodes 128 characters.</p></blockquote>
+<p>Another thing to note about UTF-8 is it is compatible with ASCII i.e. any ASCII encoded character is a valid UTF-8 encoded character.</p>
+<p>If you’re a software engineer or are really psyched up about encodings, you should definitely read the following blog post</p>
+<p><a href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/" rel="nofollow">The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a></p>
+<h2><code>LC_</code> variables</h2>
+<p>Ever tried copy-pasting some non-English (let’s say Hindi) characters from some webpage to your terminal, or tried printing them to your console? You’ll notice that they’ll work. </p>
+<p>Who tells your system to expect <code>UTF-8</code> encoded characters, and more importantly, how can you change this behavior?</p>
+<h3>A small experiment</h3>
+<p>Let’s try to answer these questions with an experiment. </p>
+<ol><li>Open a new terminal instance.</li>
+<li>Copy 😂 to your terminal. <ol><li>If you’re using modern OS, you’ll notice that the emoji gets copied perfectly.</li></ol></li>
+<li>Run <code>export LC_ALL=C</code> in your terminal.</li>
+<li>Copy 😂 again and paste it into your terminal. <ol><li>This time you’ll notice that emoji doesn’t get copied.</li>
+<li>Instead, something like <code>�&lt;009f&gt;&lt;0098&gt;&lt;0082&gt;</code> shows up.</li></ol></li></ol>
+<p>P.S.: Yes, emojis are also characters having some <code>Unicode</code> representation 😛</p>
+<h3>Explanation</h3>
+<p>So, what happened when we ran <code>export LC_ALL=C</code>? </p>
+<p>Unix/Unix-like systems have multiple environmental variables which control settings related to locale. Things like the format to show dates, the default currency, the default address format, telephone format, etc can be controlled using by setting these environment variables.  This also includes how to interpret and print characters on your terminal. </p>
+<p>These variables are initialized while installing your OS. If your OS is modern, then by default, they use some UTF-8 encoding. All of these variables can be set individually or can be set at once using the <code>LC_ALL</code> variable.</p>
+<p>The moment you set <code>LC_ALL=C</code>, your system locale got changed to <code>C</code>, which is the simplest locale. It uses ASCII for encoding the characters. And since ASCII can’t represent 😂 (an emoji), you end up seeing the mysterious values.</p>
+<p>Run <code>export LC_ALL=en_GB.UTF-8</code> in your terminal and copy 😂 again. This time you’ll see the emoji. Why? Because you changed your system locale back to <code>en_GB.UTF-8</code>, which uses UTF-8 encoding. (This assumes that you have <code>en_GB</code> locale available on your system.)</p>
+<h2>Tying everything together: Speeding up <code>grep</code></h2>
+<p>When you run </p>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">grep</span> ‘<span class="token operator">></span>’ in.fasta</code><!-- HTML_TAG_END --></pre>
+<p>without explicitly specifying any locale, <code>grep</code> assumes that the file <code>in.fasta</code> contains UTF-8 encoded characters. </p>
+<p>Instead, if you run</p>
+<pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">LC_ALL</span></span><span class="token operator">=</span>C
+<span class="token function">grep</span> ‘<span class="token operator">></span>’ in.fasta</code><!-- HTML_TAG_END --></pre>
+<p>, <code>grep</code> assumes that <code>in.fasta</code> only contains ASCII characters, which is essentially true for most of the use cases in bioinformatics.</p>
+<blockquote><p>You may ask what’s the difference between these two cases? The answer lies in the number of characters encoded by UTF-8 and ASCII. UTF-8 encodes over a million characters, while ASCII encodes only 128. And hence, <code>grep</code> has to do a lot less processing when it knows that the file contains only ASCII data.</p></blockquote>
+<p>And due to this, just by simply adding an <code>export</code> statement, you can speed up your grep execution by over <strong>500%</strong></p>
+<p>In order to get a detailed benchmark report, you can <a href="https://www.inmotionhosting.com/support/website/speed-up-grep-searches-with-lc-all/" rel="nofollow">visit this link</a></p></div></div>
+
+
+		<script type="module" data-hydrate="1yhhalk">
+		import { start } from "/_app/start-42637310.js";
+		start({
+			target: document.querySelector('[data-hydrate="1yhhalk"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-8b08daee.js"),
+						import("/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-378277f8.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>
