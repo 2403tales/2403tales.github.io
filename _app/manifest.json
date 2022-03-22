@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-42637310.js",
+    "file": "start-37d8a84d.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -17,7 +17,7 @@
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
@@ -30,7 +30,7 @@
       "_vendor-e6930037.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-09167bea.css"
+      "assets/pages/__layout.svelte-e2223523.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -43,85 +43,85 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-5bf7fa97.js",
+    "file": "pages/index.svelte-ac085c29.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js",
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-7b5f303c.js",
+    "file": "pages/categories/bioinformatics/index.svelte-1a1ab3b8.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-f5f64af7.js",
+      "_index-2909a92a.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-048e953b.js",
+    "file": "pages/categories/engineering/index.svelte-2e82f50b.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-f5f64af7.js",
+      "_index-2909a92a.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-13177341.js",
+    "file": "pages/categories/shorts/index.svelte-32dac7ea.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-f5f64af7.js",
+      "_index-2909a92a.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-8d0baec6.js",
+    "file": "pages/categories/data/index.svelte-04b366ba.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-f5f64af7.js",
+      "_index-2909a92a.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-8fce1273.js",
+    "file": "pages/categories/misc/index.svelte-e3610114.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-f5f64af7.js",
+      "_index-2909a92a.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js"
     ]
   },
@@ -145,13 +145,13 @@
     ]
   },
   "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md": {
-    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-378277f8.js",
+    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-fa7cdb66.js",
     "src": "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js"
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js"
     ]
   },
   "src/routes/posts/library-vs-framework.md": {
@@ -175,8 +175,8 @@
       "__posts-0ccc0035.js"
     ]
   },
-  "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js": {
-    "file": "chunks/leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+  "_leveraging-encodings-for-speeding-up-grep-66c78f22.js": {
+    "file": "chunks/leveraging-encodings-for-speeding-up-grep-66c78f22.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -197,11 +197,11 @@
       "_vendor-e6930037.js"
     ]
   },
-  "_index-f5f64af7.js": {
-    "file": "chunks/index-f5f64af7.js",
+  "_index-2909a92a.js": {
+    "file": "chunks/index-2909a92a.js",
     "imports": [
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-8fa3adeb.js",
+      "_leveraging-encodings-for-speeding-up-grep-66c78f22.js",
       "_library-vs-framework-0ce547f0.js",
       "_vendor-e6930037.js"
     ]
