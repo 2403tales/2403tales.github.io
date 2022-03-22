@@ -13,7 +13,6 @@
         allPostData.push({...post.metadata, link: getUrlFromName(path)})
     }
 </script>
-<h1 class="text-3xl">Tales of Engineering</h1>
 <ul>
     {#each allPostData as post}
         <li>

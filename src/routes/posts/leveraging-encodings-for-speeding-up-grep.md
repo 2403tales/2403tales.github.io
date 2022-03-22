@@ -6,8 +6,6 @@ categories: ["GNU Tools", "bioinformatics", "encodings"]
 description: "An article explaining how to leverage encodings to improve grep performance by over 500%"
 author: "Prakash"
 ---
-# Leveraging encodings to speedup grep
-
 ## Target Audience
 
 - You know what a FASTA file looks like
