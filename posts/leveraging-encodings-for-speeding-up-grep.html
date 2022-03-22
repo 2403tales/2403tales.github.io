@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Leveraging encodings for speeding up grep</title><meta name="description" content="An article explaining how to leverage encodings to improve grep performance by over 500%" data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-37d8a84d.js">
+	<link rel="modulepreload" href="/_app/start-525702eb.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-fa7cdb66.js">
+	<link rel="modulepreload" href="/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-843ee9dd.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/leveraging-encodings-for-speeding-up-grep-66c78f22.js">
+	<link rel="modulepreload" href="/_app/chunks/leveraging-encodings-for-speeding-up-grep-636524ec.js">
 	</head>
 	<body>
 		<div>
@@ -113,13 +113,15 @@
 <p>, <code>grep</code> assumes that <code>in.fasta</code> only contains ASCII characters, which is essentially true for most of the use cases in bioinformatics.</p>
 <blockquote><p>You may ask what’s the difference between these two cases? The answer lies in the number of characters encoded by UTF-8 and ASCII. UTF-8 encodes over a million characters, while ASCII encodes only 128. And hence, <code>grep</code> has to do a lot less processing when it knows that the file contains only ASCII data.</p></blockquote>
 <p>And due to this, just by simply adding an <code>export</code> statement, you can speed up your grep execution by over <strong>500%</strong></p>
-<p>In order to get a detailed benchmark report, you can <a href="https://www.inmotionhosting.com/support/website/speed-up-grep-searches-with-lc-all/" rel="nofollow">visit this link</a></p></div></div>
+<p>In order to get a detailed benchmark report, you can <a href="https://www.inmotionhosting.com/support/website/speed-up-grep-searches-with-lc-all/" rel="nofollow">visit this link</a></p>
+<h2>Bonus points</h2>
+<p>This trick can be used to speedup pretty much any tool which relies on string comparison. I’ve personally used this trick to speedup my <code>awk</code> code for <a href="https://2403tales.com/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk" rel="nofollow">splitting large SAM/BAM file by reference name</a>.</p></div></div>
 
 
-		<script type="module" data-hydrate="13z0sq2">
-		import { start } from "/_app/start-37d8a84d.js";
+		<script type="module" data-hydrate="1fgxh0o">
+		import { start } from "/_app/start-525702eb.js";
 		start({
-			target: document.querySelector('[data-hydrate="13z0sq2"]').parentNode,
+			target: document.querySelector('[data-hydrate="1fgxh0o"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -130,7 +132,7 @@
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-fa7cdb66.js")
+						import("/_app/pages/posts/leveraging-encodings-for-speeding-up-grep.md-843ee9dd.js")
 				],
 				params: {}
 			}
