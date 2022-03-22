@@ -149,3 +149,7 @@ grep ‘>’ in.fasta
 And due to this, just by simply adding an `export` statement, you can speed up your grep execution by over **500%**
 
 In order to get a detailed benchmark report, you can [visit this link](https://www.inmotionhosting.com/support/website/speed-up-grep-searches-with-lc-all/)
+
+## Bonus points
+
+This trick can be used to speedup pretty much any tool which relies on string comparison. I've personally used this trick to speedup my `awk` code for [splitting large SAM/BAM file by reference name](https://2403tales.com/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk).
