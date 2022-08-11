@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-525702eb.js",
+    "file": "start-d1bcb505.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,9 +16,10 @@
       "src/routes/categories/data/index.svelte",
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -43,86 +44,92 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-8fe019b5.js",
+    "file": "pages/index.svelte-0a6de67f.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js",
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-2b3a721a.js",
+    "file": "pages/categories/bioinformatics/index.svelte-c2f5fb39.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-de340d9e.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+      "_index-69fcc7a7.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-ef3a77fe.js",
+    "file": "pages/categories/engineering/index.svelte-b4d176df.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-de340d9e.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+      "_index-69fcc7a7.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-f1402326.js",
+    "file": "pages/categories/shorts/index.svelte-f003d4a7.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-de340d9e.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+      "_index-69fcc7a7.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-f1e874e5.js",
+    "file": "pages/categories/data/index.svelte-5161bdd3.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-de340d9e.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+      "_index-69fcc7a7.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-1dbee7ae.js",
+    "file": "pages/categories/misc/index.svelte-df8394cc.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-de340d9e.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+      "_index-69fcc7a7.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -134,57 +141,75 @@
       "_vendor-e6930037.js"
     ]
   },
+  "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md": {
+    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64d844f4.js",
+    "src": "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md",
+    "isEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-0ccc0035.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js"
+    ]
+  },
   "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md": {
-    "file": "pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-be4cc250.js",
+    "file": "pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-b20db549.js",
     "src": "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js"
     ]
   },
   "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md": {
-    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-843ee9dd.js",
+    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-7950f65b.js",
     "src": "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js"
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js"
     ]
   },
   "src/routes/posts/library-vs-framework.md": {
-    "file": "pages/posts/library-vs-framework.md-e9594c10.js",
+    "file": "pages/posts/library-vs-framework.md-acd7774c.js",
     "src": "src/routes/posts/library-vs-framework.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_library-vs-framework-0ce547f0.js"
+      "_library-vs-framework-59755e6d.js"
     ]
   },
   "_vendor-e6930037.js": {
     "file": "chunks/vendor-e6930037.js"
   },
-  "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js": {
-    "file": "chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
+  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js": {
+    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
-  "_leveraging-encodings-for-speeding-up-grep-636524ec.js": {
-    "file": "chunks/leveraging-encodings-for-speeding-up-grep-636524ec.js",
+  "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js": {
+    "file": "chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
-  "_library-vs-framework-0ce547f0.js": {
-    "file": "chunks/library-vs-framework-0ce547f0.js",
+  "_leveraging-encodings-for-speeding-up-grep-03a2566b.js": {
+    "file": "chunks/leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-0ccc0035.js"
+    ]
+  },
+  "_library-vs-framework-59755e6d.js": {
+    "file": "chunks/library-vs-framework-59755e6d.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -197,12 +222,13 @@
       "_vendor-e6930037.js"
     ]
   },
-  "_index-de340d9e.js": {
-    "file": "chunks/index-de340d9e.js",
+  "_index-69fcc7a7.js": {
+    "file": "chunks/index-69fcc7a7.js",
     "imports": [
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-e21552e2.js",
-      "_leveraging-encodings-for-speeding-up-grep-636524ec.js",
-      "_library-vs-framework-0ce547f0.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+      "_library-vs-framework-59755e6d.js",
       "_vendor-e6930037.js"
     ]
   }
