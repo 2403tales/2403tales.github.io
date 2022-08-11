@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Chromedriver v/s GeckoDriver: Dealing with PDF URLs</title><meta name="description" content="How PDFs are handled by Chromedriver and Geckodriver in headless mode" data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-a80447a9.js">
+	<link rel="modulepreload" href="/_app/start-eb8cdbe1.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-ce8276d3.js">
+	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-970ded41.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-038aee4e.js">
+	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js">
 	</head>
 	<body>
 		<div>
@@ -50,24 +50,26 @@ options <span class="token operator">=</span> Options<span class="token punctuat
 options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
 driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Chrome<span class="token punctuation">(</span><span class="token string">'./chromedriver'</span><span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span>
 
+
 <span class="token keyword">def</span> <span class="token function">save_pdf</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> fname<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-	<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fname<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-	  f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fname<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+
 
 <span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span>urls<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
-		<span class="token comment"># Navigate browser to URL containing relevant button</span>
-		driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-	<span class="token keyword">try</span><span class="token punctuation">:</span>
-		<span class="token comment"># If the button exists, click it</span>
-	  x <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span> <span class="token triple-quoted-string string">'''//input[@value='Click here']'''</span><span class="token punctuation">)</span>
-	  x<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-	<span class="token keyword">except</span> NoSuchElementException<span class="token punctuation">:</span>
-		<span class="token comment"># If it doesn't, we're on PDF page</span>
-    	<span class="token keyword">pass</span>
-	<span class="token comment"># Finally, save the PDF at the current URL to a file named xxxx.pdf</span>
-	save_pdf<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span> <span class="token string">'xxxx.pdf'</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+    <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
+        <span class="token comment"># Navigate browser to URL containing relevant button</span>
+        driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token comment"># If the button exists, click it</span>
+        x <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span> <span class="token triple-quoted-string string">'''//input[@value='Click here']'''</span><span class="token punctuation">)</span>
+        x<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> NoSuchElementException<span class="token punctuation">:</span>
+        <span class="token comment"># If it doesn't, we're on PDF page</span>
+        <span class="token keyword">pass</span>
+    <span class="token comment"># Finally, save the PDF at the current URL to a file named xxxx.pdf</span>
+    save_pdf<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span> <span class="token string">'xxxx.pdf'</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
 <h2>Problem Statement</h2>
 <p>The code is straightforward, and it worked fine when the headless mode was off. However, the moment headless mode was turned on, something spooky started to happen. Plain HTML pages containing the <code>Click here</code> button were being downloaded instead of PDFs. Given this fact, one might conclude that <code>x.click()</code> was not executing properly. </p>
 <p>But astonishingly, PDFs were getting downloaded, just with some gibberish names (like <code>3487938nfhabalkvt.pdf</code>). I was confused as fuck, because if my <code>save_pdf</code> module was downloading the HTML pages, who tf was downloading the PDFs??</p>
@@ -76,40 +78,43 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 <h2>Solution</h2>
 <p>On a hunch, I just changed <code>chromedriver</code> to <code>geckodriver</code> (Webdriver for Firefox), and everything worked. Here’s the new snippet which worked</p>
 <p>P.S.: To get <code>geckodriver</code> to work, you need to add directory containing <code>geckodriver</code> to <code>PATH</code>.</p>
-<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>firefox<span class="token punctuation">.</span>options <span class="token keyword">import</span> Options <span class="token comment"># This changed</span>
+<pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>firefox<span class="token punctuation">.</span>options <span class="token keyword">import</span> Options  <span class="token comment"># This changed</span>
 
 options <span class="token operator">=</span> Options<span class="token punctuation">(</span><span class="token punctuation">)</span>
 options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
 <span class="token comment"># Ensure that geckodriver executable is in PATH</span>
-driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Firefox<span class="token punctuation">(</span>options<span class="token operator">=</span>options<span class="token punctuation">)</span> <span class="token comment"># This changed</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Firefox<span class="token punctuation">(</span>options<span class="token operator">=</span>options<span class="token punctuation">)</span>  <span class="token comment"># This changed</span>
+
 
 <span class="token keyword">def</span> <span class="token function">save_pdf</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> fname<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-	<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fname<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
-	  f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+    response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>fname<span class="token punctuation">,</span> <span class="token string">'wb'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+        f<span class="token punctuation">.</span>write<span class="token punctuation">(</span>response<span class="token punctuation">.</span>content<span class="token punctuation">)</span>
+
 
 <span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span>urls<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
-		<span class="token comment"># Navigate browser to URL containing relevant button</span>
-		driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
-	<span class="token keyword">try</span><span class="token punctuation">:</span>
-		<span class="token comment"># If the button exists, click it</span>
-	  x <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span> <span class="token triple-quoted-string string">'''//input[@value='Click here']'''</span><span class="token punctuation">)</span>
-	  x<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-	<span class="token keyword">except</span> NoSuchElementException<span class="token punctuation">:</span>
-		<span class="token comment"># If it doesn't, we're on PDF page</span>
-   		<span class="token keyword">pass</span>
-	<span class="token comment"># Finally, save the PDF at the current URL to a file named xxxx.pdf</span>
-	save_pdf<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span> <span class="token string">'xxxx.pdf'</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+    <span class="token keyword">for</span> url <span class="token keyword">in</span> urls<span class="token punctuation">:</span>
+        <span class="token comment"># Navigate browser to URL containing relevant button</span>
+        driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        <span class="token comment"># If the button exists, click it</span>
+        x <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element<span class="token punctuation">(</span>By<span class="token punctuation">.</span>XPATH<span class="token punctuation">,</span> <span class="token triple-quoted-string string">'''//input[@value='Click here']'''</span><span class="token punctuation">)</span>
+        x<span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> NoSuchElementException<span class="token punctuation">:</span>
+        <span class="token comment"># If it doesn't, we're on PDF page</span>
+        <span class="token keyword">pass</span>
+    <span class="token comment"># Finally, save the PDF at the current URL to a file named xxxx.pdf</span>
+    save_pdf<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span> <span class="token string">'xxxx.pdf'</span><span class="token punctuation">)</span>
+</code><!-- HTML_TAG_END --></pre>
 <h2>Related links</h2>
 <p>There were tons of links that I visited, but this one gives you enough information to diagnose the problem</p>
 <p><a href="https://github.com/puppeteer/puppeteer/issues/1872" rel="nofollow">https://github.com/puppeteer/puppeteer/issues/1872</a></p></div></div>
 
 
-		<script type="module" data-hydrate="1ad7lup">
-		import { start } from "/_app/start-a80447a9.js";
+		<script type="module" data-hydrate="ggjhoi">
+		import { start } from "/_app/start-eb8cdbe1.js";
 		start({
-			target: document.querySelector('[data-hydrate="1ad7lup"]').parentNode,
+			target: document.querySelector('[data-hydrate="ggjhoi"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -120,7 +125,7 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-ce8276d3.js")
+						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-970ded41.js")
 				],
 				params: {}
 			}
