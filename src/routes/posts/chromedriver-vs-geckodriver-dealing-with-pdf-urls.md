@@ -37,7 +37,7 @@ def main(urls: List[str]):
 	  x.click()
 	except NoSuchElementException:
 		# If it doesn't, we're on PDF page
-    pass
+    	pass
 	# Finally, save the PDF at the current URL to a file named xxxx.pdf
 	save_pdf(driver.current_url, 'xxxx.pdf')
 ```
@@ -81,7 +81,7 @@ def main(urls: List[str]):
 	  x.click()
 	except NoSuchElementException:
 		# If it doesn't, we're on PDF page
-    pass
+   		pass
 	# Finally, save the PDF at the current URL to a file named xxxx.pdf
 	save_pdf(driver.current_url, 'xxxx.pdf')
 ```
