@@ -56,12 +56,15 @@ And the worst part, `driver.current_url` still points to the link which redirect
 
 On a hunch, I just changed `chromedriver` to `geckodriver` (Webdriver for Firefox), and everything worked. Here's the new snippet which worked
 
+P.S.: To get `geckodriver` to work, you need to add directory containing `geckodriver` to `PATH`.
+
 ```python
 from selenium.webdriver.firefox.options import Options # This changed
 
 options = Options()
 options.add_argument("--headless")
-driver = webdriver.Firefox('./geckodriver', options=options) # This changed
+# Ensure that geckodriver executable is in PATH
+driver = webdriver.Firefox(options=options) # This changed
 
 def save_pdf(url, fname):
 	response = requests.get(url)
