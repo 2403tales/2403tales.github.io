@@ -22,24 +22,26 @@ options = Options()
 options.add_argument("--headless")
 driver = webdriver.Chrome('./chromedriver', options=options)
 
+
 def save_pdf(url, fname):
-	response = requests.get(url)
-	with open(fname, 'wb') as f:
-	  f.write(response.content)
+    response = requests.get(url)
+    with open(fname, 'wb') as f:
+        f.write(response.content)
+
 
 def main(urls: List[str]):
-	for url in urls:
-		# Navigate browser to URL containing relevant button
-		driver.get(url)
-	try:
-		# If the button exists, click it
-	  x = driver.find_element(By.XPATH, '''//input[@value='Click here']''')
-	  x.click()
-	except NoSuchElementException:
-		# If it doesn't, we're on PDF page
-    	pass
-	# Finally, save the PDF at the current URL to a file named xxxx.pdf
-	save_pdf(driver.current_url, 'xxxx.pdf')
+    for url in urls:
+        # Navigate browser to URL containing relevant button
+        driver.get(url)
+    try:
+        # If the button exists, click it
+        x = driver.find_element(By.XPATH, '''//input[@value='Click here']''')
+        x.click()
+    except NoSuchElementException:
+        # If it doesn't, we're on PDF page
+        pass
+    # Finally, save the PDF at the current URL to a file named xxxx.pdf
+    save_pdf(driver.current_url, 'xxxx.pdf')
 ```
 
 ## Problem Statement
@@ -59,31 +61,34 @@ On a hunch, I just changed `chromedriver` to `geckodriver` (Webdriver for Firefo
 P.S.: To get `geckodriver` to work, you need to add directory containing `geckodriver` to `PATH`.
 
 ```python
-from selenium.webdriver.firefox.options import Options # This changed
+from selenium.webdriver.firefox.options import Options  # This changed
 
 options = Options()
 options.add_argument("--headless")
 # Ensure that geckodriver executable is in PATH
-driver = webdriver.Firefox(options=options) # This changed
+driver = webdriver.Firefox(options=options)  # This changed
+
 
 def save_pdf(url, fname):
-	response = requests.get(url)
-	with open(fname, 'wb') as f:
-	  f.write(response.content)
+    response = requests.get(url)
+    with open(fname, 'wb') as f:
+        f.write(response.content)
+
 
 def main(urls: List[str]):
-	for url in urls:
-		# Navigate browser to URL containing relevant button
-		driver.get(url)
-	try:
-		# If the button exists, click it
-	  x = driver.find_element(By.XPATH, '''//input[@value='Click here']''')
-	  x.click()
-	except NoSuchElementException:
-		# If it doesn't, we're on PDF page
-   		pass
-	# Finally, save the PDF at the current URL to a file named xxxx.pdf
-	save_pdf(driver.current_url, 'xxxx.pdf')
+    for url in urls:
+        # Navigate browser to URL containing relevant button
+        driver.get(url)
+    try:
+        # If the button exists, click it
+        x = driver.find_element(By.XPATH, '''//input[@value='Click here']''')
+        x.click()
+    except NoSuchElementException:
+        # If it doesn't, we're on PDF page
+        pass
+    # Finally, save the PDF at the current URL to a file named xxxx.pdf
+    save_pdf(driver.current_url, 'xxxx.pdf')
+
 ```
 
 ## Related links
