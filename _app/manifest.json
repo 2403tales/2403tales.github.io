@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-d1bcb505.js",
+    "file": "start-feaf764a.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -17,7 +17,7 @@
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
       "_library-vs-framework-59755e6d.js"
     ]
@@ -44,12 +44,12 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-0a6de67f.js",
+    "file": "pages/index.svelte-ab8cfb74.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
       "_library-vs-framework-59755e6d.js",
@@ -58,14 +58,14 @@
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-c2f5fb39.js",
+    "file": "pages/categories/bioinformatics/index.svelte-08d3ffe9.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-69fcc7a7.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_index-09b735ea.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
@@ -73,14 +73,14 @@
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-b4d176df.js",
+    "file": "pages/categories/engineering/index.svelte-ff796001.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-69fcc7a7.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_index-09b735ea.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
@@ -88,14 +88,14 @@
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-f003d4a7.js",
+    "file": "pages/categories/shorts/index.svelte-86c22931.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-69fcc7a7.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_index-09b735ea.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
@@ -103,14 +103,14 @@
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-5161bdd3.js",
+    "file": "pages/categories/data/index.svelte-d45c3e17.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-69fcc7a7.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_index-09b735ea.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
@@ -118,14 +118,14 @@
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-df8394cc.js",
+    "file": "pages/categories/misc/index.svelte-a41dc3ac.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-69fcc7a7.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_index-09b735ea.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
@@ -142,13 +142,13 @@
     ]
   },
   "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md": {
-    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64d844f4.js",
+    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-7ae0264a.js",
     "src": "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js"
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js"
     ]
   },
   "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md": {
@@ -184,8 +184,8 @@
   "_vendor-e6930037.js": {
     "file": "chunks/vendor-e6930037.js"
   },
-  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js": {
-    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js": {
+    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -222,10 +222,10 @@
       "_vendor-e6930037.js"
     ]
   },
-  "_index-69fcc7a7.js": {
-    "file": "chunks/index-69fcc7a7.js",
+  "_index-09b735ea.js": {
+    "file": "chunks/index-09b735ea.js",
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
       "_library-vs-framework-59755e6d.js",

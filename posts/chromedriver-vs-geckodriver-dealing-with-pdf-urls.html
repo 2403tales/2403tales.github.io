@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Chromedriver v/s GeckoDriver: Dealing with PDF URLs</title><meta name="description" content="How PDFs are handled by Chromedriver and Geckodriver in headless mode" data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-d1bcb505.js">
+	<link rel="modulepreload" href="/_app/start-feaf764a.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64d844f4.js">
+	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-7ae0264a.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-71ae621f.js">
+	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-8e687ee0.js">
 	</head>
 	<body>
 		<div>
@@ -75,11 +75,13 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 <p>And the worst part, <code>driver.current_url</code> still points to the link which redirects you to the PDF, not the actual PDF link 😖. So that’s why, when <code>save_pdf</code> was getting called, it actually downloaded the HTML page, and since <code>x.click()</code> happened, the <code>chromedriver</code> was downloading the PDFs separately, and assigning the name which it got from the server.</p>
 <h2>Solution</h2>
 <p>On a hunch, I just changed <code>chromedriver</code> to <code>geckodriver</code> (Webdriver for Firefox), and everything worked. Here’s the new snippet which worked</p>
+<p>P.S.: To get <code>geckodriver</code> to work, you need to add directory containing <code>geckodriver</code> to <code>PATH</code>.</p>
 <pre class="language-python"><!-- HTML_TAG_START --><code class="language-python"><span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver<span class="token punctuation">.</span>firefox<span class="token punctuation">.</span>options <span class="token keyword">import</span> Options <span class="token comment"># This changed</span>
 
 options <span class="token operator">=</span> Options<span class="token punctuation">(</span><span class="token punctuation">)</span>
 options<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
-driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Firefox<span class="token punctuation">(</span><span class="token string">'./geckodriver'</span><span class="token punctuation">,</span> options<span class="token operator">=</span>options<span class="token punctuation">)</span> <span class="token comment"># This changed</span>
+<span class="token comment"># Ensure that geckodriver executable is in PATH</span>
+driver <span class="token operator">=</span> webdriver<span class="token punctuation">.</span>Firefox<span class="token punctuation">(</span>options<span class="token operator">=</span>options<span class="token punctuation">)</span> <span class="token comment"># This changed</span>
 
 <span class="token keyword">def</span> <span class="token function">save_pdf</span><span class="token punctuation">(</span>url<span class="token punctuation">,</span> fname<span class="token punctuation">)</span><span class="token punctuation">:</span>
 	response <span class="token operator">=</span> requests<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
@@ -104,10 +106,10 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 <p><a href="https://github.com/puppeteer/puppeteer/issues/1872" rel="nofollow">https://github.com/puppeteer/puppeteer/issues/1872</a></p></div></div>
 
 
-		<script type="module" data-hydrate="rpq2c0">
-		import { start } from "/_app/start-d1bcb505.js";
+		<script type="module" data-hydrate="fioqa0">
+		import { start } from "/_app/start-feaf764a.js";
 		start({
-			target: document.querySelector('[data-hydrate="rpq2c0"]').parentNode,
+			target: document.querySelector('[data-hydrate="fioqa0"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -118,7 +120,7 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64d844f4.js")
+						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-7ae0264a.js")
 				],
 				params: {}
 			}
