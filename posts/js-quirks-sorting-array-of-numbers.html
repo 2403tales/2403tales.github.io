@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../favicon.ico" />
+		<link rel="stylesheet" href="../css/prism.css"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="content-security-policy" content=""><title>JS Quirks: Sorting array of numbers</title><meta name="description" content="Annoying behaviour of JS while sorting array of numbers, and how to fix it." data-svelte="svelte-t80vtw">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
+	<link rel="modulepreload" href="/_app/start-dfcd64e5.js">
+	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
+	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
+	<link rel="modulepreload" href="/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-31f1093e.js">
+	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
+	<link rel="modulepreload" href="/_app/chunks/js-quirks-sorting-array-of-numbers-5cd624fa.js">
+	</head>
+	<body>
+		<div>
+
+
+<nav class="bg-emerald-500 text-neutral-900 px-2 sm:px-4 py-2 sticky top-0"><div class="container flex flex-wrap items-center mx-auto"><a href="/"><span class="self-center text-neutral-900 no-underline text-lg font-bold whitespace-nowrap font-mono">2403tales</span></a>
+      <div class="grow text-right font-semibold whitespace-nowrap font-mono space-x-4 hidden md:block"><a href="/categories/shorts"><span class="text-neutral-900 hover:text-neutral-600">Shorts</span></a>
+          <a href="/categories/engineering"><span class="text-neutral-900 hover:text-neutral-600">Engineering</span></a>
+          <a href="/categories/data"><span class="text-neutral-900 hover:text-neutral-600">Data</span></a>
+          <a href="/categories/bioinformatics"><span class="text-neutral-900 hover:text-neutral-600">Bioinformatics</span></a>
+          <a href="/categories/misc"><span class="text-neutral-900 hover:text-neutral-600">Misc</span></a>
+          <a href="/about"><span class="text-neutral-900 hover:text-neutral-600">whoami</span></a></div>
+      <div class="text-right grow md:hidden"><button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-neutral-900 md:hidden" aria-controls="mobile-menu-2" aria-expanded="false"><span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+        <div class="hidden w-full md:block md:w-auto" id="mobile-menu"></div></div></div></nav>
+
+<div class="container mx-auto mt-5">
+
+<div class="container md:mx-auto px-4 pb-10"><div class="pt-5 pb-5 font-bold"><div><div class="mr-2 flex"><div>
+          <a href="#"><p class="justify-center w-16 leading-tight text-sm text-center">
+              <img class="rounded-full w-16 h-16" src="/images/Prakash.png" alt="Profile picture"></p></a></div>
+        <div class="ml-3 mb-3"><a href="#"><p>Prakash</p></a>
+          <p class="text-gray-400">15 August, 2022</p></div></div>
+      <h1>JS Quirks: Sorting array of numbers</h1>
+      <div class="flex text-sm mt-2"><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">Frontend</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">Javascript</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">engineering</p></div></div></div>
+  <h1>JS Quirks: Sorting array of numbers</h1>
+<p><strong>TL;DR:</strong> If you’re trying to sort an array of numbers in JS, pass a comparison function. Otherwise, it will consider the datatype of elements as a <code>string</code> and will sort based on the first character (So basically, <code>12</code> will come before <code>2</code>). Here’s how you pass a comparison function</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">idx <span class="token operator">=</span>  <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+idx<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span> <span class="token comment">// Sorts in ascending order</span></code><!-- HTML_TAG_END --></pre>
+<h2>Background</h2>
+<p>Imagine sitting on your chair, developing a UI for your client. Work is progressing at a steady pace, and you’re trying to figure out a way to optimize the rendering of a component.</p>
+<p>Suddenly it hits you that if you sort the array you’re sending to your component, then you might be able to reduce the rendering time and improve the UX simultaneously. So you fold your shirt and get started on the task.</p>
+<h2>Problem Statement</h2>
+<p>The task is very simple. Given an array</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">ids <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
+<p>Sort it and pass it to your component</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span><span class="token class-name">YourComponent</span></span> <span class="token attr-name">id_list</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">&#123;</span>ids<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#125;</span></span><span class="token punctuation">/></span></span></code><!-- HTML_TAG_END --></pre>
+<p>The above snippet should do the job. Right? The code looks intuitive, and I checked <code>sort</code> function returns the sorted array. So it should work. But it doesn’t! Something fishy happens. For some reason, <code>12</code> comes between <code>1</code> and <code>2</code>. I should also mention that most of my inputs were in the range 1 - 10, and it was unlikely to encounter a number greater than 10 (they were page numbers if you’re curious).</p>
+<h2>The hustle</h2>
+<p>Based on the output, it was obvious that the array was sorted in lexicographic order. But why? I double-checked the API response, and it was returning integers. I double-checked the code fetching the API response, it wasn’t doing any explicit <code>type</code> conversions. I checked the involved components and didn’t find any explicit <code>type</code> conversions there too.</p>
+<p>Finally, being frustrated after 2 hours of debugging, I just opened by browser console and ran these</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">idx <span class="token operator">=</span>  <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+new_idx <span class="token operator">=</span> idx<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>new_idx<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<p>To my awful surprise, I found this as output</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span> </code><!-- HTML_TAG_END --></pre>
+<p>WTF JS! WTF. Why tf you are sorting an integer array lexicographically?</p>
+<h2>Solution</h2>
+<p>I never got the answer to the <code>Why?</code> JS chooses to do this, but I found out the way to sort numerical arrays correctly. While calling the <code>sort</code> function, you have to pass a comparator (The good old <code>Java</code> way). So, the correct syntax would be</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">idx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+new_idx <span class="token operator">=</span> idx<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>new_idx<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
+<p>which gives the correct output</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
+<h3>Comparator</h3>
+<p>As the name suggests, Comparator is a function used to <em>compare</em> the elements of the array. In the above example, the comparator was </p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b</code><!-- HTML_TAG_END --></pre>
+<p>If the output of the comparator is negative, then it means that <code>a</code> is lesser than <code>b</code>, and hence <code>a</code> should come before <code>b</code> in the sorted array. Conversely, if it is positive, then <code>a</code> is greater than <code>b</code>, and <code>a</code> should come after <code>b</code> in the sorted array.</p>
+<p>E.g.: Consider</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
+<p>as input, and </p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b</code><!-- HTML_TAG_END --></pre>
+<p>as our comparator. Here are the possible comparisons</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token comment">// Showing all comparisons for sake of clarity. </span>
+<span class="token comment">// Under the hood, sorting algorithm won't run the comparator on all possible pairs</span>
+<span class="token punctuation">(</span><span class="token parameter"><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">12</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">-</span><span class="token number">11</span>
+<span class="token punctuation">(</span><span class="token parameter"><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">12</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">-</span><span class="token number">10</span>
+<span class="token punctuation">(</span><span class="token parameter"><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token operator">-</span><span class="token number">1</span></code><!-- HTML_TAG_END --></pre>
+<p>The above comparisons tell us that </p>
+<ul><li>1 will come before 12</li>
+<li>2 will come before 12</li>
+<li>1 will come before 12</li></ul>
+<p>Hence, the final answer you will get is</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
+<p>Now, just for fun, let’s tweak the comparator to this</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> b <span class="token operator">-</span> a <span class="token comment">// Any guesses on how it will affect the output?</span></code><!-- HTML_TAG_END --></pre>
+<p>For the same input, we will get the following comparisons</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">(</span><span class="token parameter"><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">12</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">11</span>
+<span class="token punctuation">(</span><span class="token parameter"><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">12</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">10</span>
+<span class="token punctuation">(</span><span class="token parameter"><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token number">1</span></code><!-- HTML_TAG_END --></pre>
+<p>Based on this, we can conclude that</p>
+<ul><li>1 will come after 12</li>
+<li>2 will come after 12</li>
+<li>1 will come after 2</li></ul>
+<p>Hence the final answer, in this case, will be</p>
+<pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span></code><!-- HTML_TAG_END --></pre>
+<p>which is the input array sorted in descending order.</p>
+<h2>Conclusion</h2>
+<p>Ideally, JS should’ve sorted an array numerically if all the elements were numbers. But that’s not something in our control. So we have to work with the tools we have. Comparators give us a powerful way of controlling the order of elements after sorting. Knowing how (and when) to use them may save you from writing a few extra lines of code, and maybe a few hours of debugging and cursing at JS.</p></div></div>
+
+
+		<script type="module" data-hydrate="io14a5">
+		import { start } from "/_app/start-dfcd64e5.js";
+		start({
+			target: document.querySelector('[data-hydrate="io14a5"]').parentNode,
+			paths: {"base":"","assets":""},
+			session: {},
+			route: true,
+			spa: false,
+			trailing_slash: "never",
+			hydrate: {
+				status: 200,
+				error: null,
+				nodes: [
+					import("/_app/pages/__layout.svelte-8b08daee.js"),
+						import("/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-31f1093e.js")
+				],
+				params: {}
+			}
+		});
+	</script></div>
+	</body>
+</html>

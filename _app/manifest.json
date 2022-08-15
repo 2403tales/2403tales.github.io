@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-eb8cdbe1.js",
+    "file": "start-dfcd64e5.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -18,8 +18,9 @@
       "src/routes/about.svelte",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -44,92 +45,98 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-1d596eb4.js",
+    "file": "pages/index.svelte-222219b6.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js",
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js",
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-8fbf0c3b.js",
+    "file": "pages/categories/bioinformatics/index.svelte-b61f6222.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-906f5c1c.js",
+      "_index-86518ba0.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-071e82fb.js",
+    "file": "pages/categories/engineering/index.svelte-fb02b523.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-906f5c1c.js",
+      "_index-86518ba0.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-1e429d18.js",
+    "file": "pages/categories/shorts/index.svelte-3a5c53a4.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-906f5c1c.js",
+      "_index-86518ba0.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-5ddb4733.js",
+    "file": "pages/categories/data/index.svelte-cb5be332.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-906f5c1c.js",
+      "_index-86518ba0.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-92b59cd3.js",
+    "file": "pages/categories/misc/index.svelte-57e6e288.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-906f5c1c.js",
+      "_index-86518ba0.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js"
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -161,24 +168,34 @@
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js"
     ]
   },
+  "src/routes/posts/js-quirks-sorting-array-of-numbers.md": {
+    "file": "pages/posts/js-quirks-sorting-array-of-numbers.md-31f1093e.js",
+    "src": "src/routes/posts/js-quirks-sorting-array-of-numbers.md",
+    "isEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-0ccc0035.js",
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js"
+    ]
+  },
   "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md": {
-    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-7950f65b.js",
+    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-19946776.js",
     "src": "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js"
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js"
     ]
   },
   "src/routes/posts/library-vs-framework.md": {
-    "file": "pages/posts/library-vs-framework.md-acd7774c.js",
+    "file": "pages/posts/library-vs-framework.md-9a8e12ee.js",
     "src": "src/routes/posts/library-vs-framework.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_library-vs-framework-59755e6d.js"
+      "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "_vendor-e6930037.js": {
@@ -200,16 +217,24 @@
       "__posts-0ccc0035.js"
     ]
   },
-  "_leveraging-encodings-for-speeding-up-grep-03a2566b.js": {
-    "file": "chunks/leveraging-encodings-for-speeding-up-grep-03a2566b.js",
+  "_js-quirks-sorting-array-of-numbers-5cd624fa.js": {
+    "file": "chunks/js-quirks-sorting-array-of-numbers-5cd624fa.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js"
     ]
   },
-  "_library-vs-framework-59755e6d.js": {
-    "file": "chunks/library-vs-framework-59755e6d.js",
+  "_leveraging-encodings-for-speeding-up-grep-3f66b969.js": {
+    "file": "chunks/leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-0ccc0035.js"
+    ]
+  },
+  "_library-vs-framework-4d7e10dc.js": {
+    "file": "chunks/library-vs-framework-4d7e10dc.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -222,13 +247,14 @@
       "_vendor-e6930037.js"
     ]
   },
-  "_index-906f5c1c.js": {
-    "file": "chunks/index-906f5c1c.js",
+  "_index-86518ba0.js": {
+    "file": "chunks/index-86518ba0.js",
     "imports": [
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-acb954a1.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_leveraging-encodings-for-speeding-up-grep-03a2566b.js",
-      "_library-vs-framework-59755e6d.js",
+      "_js-quirks-sorting-array-of-numbers-5cd624fa.js",
+      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+      "_library-vs-framework-4d7e10dc.js",
       "_vendor-e6930037.js"
     ]
   }
