@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>JS Quirks: Sorting array of numbers</title><meta name="description" content="Annoying behaviour of JS while sorting array of numbers, and how to fix it." data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-dfcd64e5.js">
+	<link rel="modulepreload" href="/_app/start-f1ef1d6e.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-31f1093e.js">
+	<link rel="modulepreload" href="/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-6afcb6d4.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/js-quirks-sorting-array-of-numbers-5cd624fa.js">
+	<link rel="modulepreload" href="/_app/chunks/js-quirks-sorting-array-of-numbers-c46aa32a.js">
 	</head>
 	<body>
 		<div>
@@ -39,8 +39,7 @@
           <p class="text-gray-400">15 August, 2022</p></div></div>
       <h1>JS Quirks: Sorting array of numbers</h1>
       <div class="flex text-sm mt-2"><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">Frontend</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">Javascript</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">engineering</p></div></div></div>
-  <h1>JS Quirks: Sorting array of numbers</h1>
-<p><strong>TL;DR:</strong> If you’re trying to sort an array of numbers in JS, pass a comparison function. Otherwise, it will consider the datatype of elements as a <code>string</code> and will sort based on the first character (So basically, <code>12</code> will come before <code>2</code>). Here’s how you pass a comparison function</p>
+  <p><strong>TL;DR:</strong> If you’re trying to sort an array of numbers in JS, pass a comparison function. Otherwise, it will consider the datatype of elements as a <code>string</code> and will sort based on the first character (So basically, <code>12</code> will come before <code>2</code>). Here’s how you pass a comparison function</p>
 <pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">idx <span class="token operator">=</span>  <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
 idx<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">a<span class="token punctuation">,</span> b</span><span class="token punctuation">)</span> <span class="token operator">=></span> a <span class="token operator">-</span> b<span class="token punctuation">)</span> <span class="token comment">// Sorts in ascending order</span></code><!-- HTML_TAG_END --></pre>
 <h2>Background</h2>
@@ -105,10 +104,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Ideally, JS should’ve sorted an array numerically if all the elements were numbers. But that’s not something in our control. So we have to work with the tools we have. Comparators give us a powerful way of controlling the order of elements after sorting. Knowing how (and when) to use them may save you from writing a few extra lines of code, and maybe a few hours of debugging and cursing at JS.</p></div></div>
 
 
-		<script type="module" data-hydrate="io14a5">
-		import { start } from "/_app/start-dfcd64e5.js";
+		<script type="module" data-hydrate="19t44ly">
+		import { start } from "/_app/start-f1ef1d6e.js";
 		start({
-			target: document.querySelector('[data-hydrate="io14a5"]').parentNode,
+			target: document.querySelector('[data-hydrate="19t44ly"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -119,7 +118,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-31f1093e.js")
+						import("/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-6afcb6d4.js")
 				],
 				params: {}
 			}
