@@ -53,7 +53,7 @@ To my awful surprise, I found this as output
 [1, 12, 2, 3, 9] 
 ```
 
-WTF JS! WTF. Why tf you are sorting an integer array lexicographically?
+Why JS! Why? Why are you sorting an integer array lexicographically?
 
 ## Solution
 
