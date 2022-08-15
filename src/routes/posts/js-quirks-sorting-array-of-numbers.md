@@ -33,7 +33,7 @@ Sort it and pass it to your component
 <YourComponent id_list={ids.sort()}/>
 ```
 
-The above snippet should do the job. Right? The code looks intuitive, and I checked `sort` function returns the sorted array. So it should work. But it doesn’t! Something fishy happens. For some reason, `12` comes between `1` and `2`. I should also mention that most of my inputs were in the range 1 - 10, and it was unlikely to encounter a number greater than 10 (they were page numbers if you’re curious).
+The above snippet should do the job. Right? The code looks intuitive, and I checked `sort` function returns the sorted array. So it should work. But it doesn’t! Something fishy happens. For some reason, `12` comes between `1` and `2`.
 
 ## The hustle
 
