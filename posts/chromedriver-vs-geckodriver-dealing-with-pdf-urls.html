@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Chromedriver v/s GeckoDriver: Dealing with PDF URLs</title><meta name="description" content="How PDFs are handled by Chromedriver and Geckodriver in headless mode" data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-728e84eb.js">
+	<link rel="modulepreload" href="/_app/start-60624c39.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-eaa8fd29.js">
+	<link rel="modulepreload" href="/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64838d3f.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js">
+	<link rel="modulepreload" href="/_app/chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js">
 	</head>
 	<body>
 		<div>
@@ -72,7 +72,7 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
     save_pdf<span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">,</span> <span class="token string">'xxxx.pdf'</span><span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
 <h2>Problem Statement</h2>
 <p>The code is straightforward, and it worked fine when the headless mode was off. However, the moment headless mode was turned on, something spooky started to happen. Plain HTML pages containing the <code>Click here</code> button were being downloaded instead of PDFs. Given this fact, one might conclude that <code>x.click()</code> was not executing properly. </p>
-<p>But astonishingly, PDFs were getting downloaded, just with some gibberish names (like <code>3487938nfhabalkvt.pdf</code>). I was confused as fuck, because if my <code>save_pdf</code> module was downloading the HTML pages, who tf was downloading the PDFs??</p>
+<p>But astonishingly, PDFs were getting downloaded, just with some gibberish names (like <code>3487938nfhabalkvt.pdf</code>). I was confused, because if my <code>save_pdf</code> module was downloading the HTML pages, who was downloading the PDFs??</p>
 <p>And after 8 hours of debugging and researching, I concluded that <code>chromedriver</code> was the culprit! It was the one downloading the PDFs. The next question was why? And the closest answer I could find after hours of research was that <code>chromedriver</code> doesn’t support opening the PDFs, and hence the default behavior is to download the PDF whenever it encounters a link containing a PDF. </p>
 <p>And the worst part, <code>driver.current_url</code> still points to the link which redirects you to the PDF, not the actual PDF link 😖. So that’s why, when <code>save_pdf</code> was getting called, it actually downloaded the HTML page, and since <code>x.click()</code> happened, the <code>chromedriver</code> was downloading the PDFs separately, and assigning the name which it got from the server.</p>
 <h2>Solution</h2>
@@ -111,10 +111,10 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 <p><a href="https://github.com/puppeteer/puppeteer/issues/1872" rel="nofollow">https://github.com/puppeteer/puppeteer/issues/1872</a></p></div></div>
 
 
-		<script type="module" data-hydrate="1vh3nqv">
-		import { start } from "/_app/start-728e84eb.js";
+		<script type="module" data-hydrate="1uefacs">
+		import { start } from "/_app/start-60624c39.js";
 		start({
-			target: document.querySelector('[data-hydrate="1vh3nqv"]').parentNode,
+			target: document.querySelector('[data-hydrate="1uefacs"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -125,7 +125,7 @@ driver <span class="token operator">=</span> webdriver<span class="token punctua
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-eaa8fd29.js")
+						import("/_app/pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64838d3f.js")
 				],
 				params: {}
 			}

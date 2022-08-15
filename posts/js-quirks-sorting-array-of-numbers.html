@@ -7,12 +7,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>JS Quirks: Sorting array of numbers</title><meta name="description" content="Annoying behaviour of JS while sorting array of numbers, and how to fix it." data-svelte="svelte-t80vtw">
 	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-728e84eb.js">
+	<link rel="modulepreload" href="/_app/start-60624c39.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-89d9d3b5.js">
+	<link rel="modulepreload" href="/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-1cde26aa.js">
 	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/js-quirks-sorting-array-of-numbers-7b0d77fd.js">
+	<link rel="modulepreload" href="/_app/chunks/js-quirks-sorting-array-of-numbers-72c534ec.js">
 	</head>
 	<body>
 		<div>
@@ -59,7 +59,7 @@ new_idx <span class="token operator">=</span> idx<span class="token punctuation"
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>new_idx<span class="token punctuation">)</span></code><!-- HTML_TAG_END --></pre>
 <p>To my awful surprise, I found this as output</p>
 <pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx"><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span> </code><!-- HTML_TAG_END --></pre>
-<p>WTF JS! WTF. Why tf you are sorting an integer array lexicographically?</p>
+<p>Why JS! Why? Why are you sorting an integer array lexicographically?</p>
 <h2>Solution</h2>
 <p>I never got the answer to the <code>Why?</code> JS chooses to do this, but I found out the way to sort numerical arrays correctly. While calling the <code>sort</code> function, you have to pass a comparator (The good old <code>Java</code> way). So, the correct syntax would be</p>
 <pre class="language-jsx"><!-- HTML_TAG_START --><code class="language-jsx">idx <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
@@ -104,10 +104,10 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <p>Ideally, JS should’ve sorted an array numerically if all the elements were numbers. But that’s not something in our control. So we have to work with the tools we have. Comparators give us a powerful way of controlling the order of elements after sorting. Knowing how (and when) to use them may save you from writing a few extra lines of code, and maybe a few hours of debugging and cursing at JS.</p></div></div>
 
 
-		<script type="module" data-hydrate="nqyh48">
-		import { start } from "/_app/start-728e84eb.js";
+		<script type="module" data-hydrate="zkvd6z">
+		import { start } from "/_app/start-60624c39.js";
 		start({
-			target: document.querySelector('[data-hydrate="nqyh48"]').parentNode,
+			target: document.querySelector('[data-hydrate="zkvd6z"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -118,7 +118,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-89d9d3b5.js")
+						import("/_app/pages/posts/js-quirks-sorting-array-of-numbers.md-1cde26aa.js")
 				],
 				params: {}
 			}

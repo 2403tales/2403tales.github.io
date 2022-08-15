@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-728e84eb.js",
+    "file": "start-60624c39.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -17,9 +17,9 @@
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
   },
@@ -45,14 +45,14 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-369b0b96.js",
+    "file": "pages/index.svelte-f514460d.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js",
       "_vendor-e6930037.js",
@@ -60,81 +60,81 @@
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-23241009.js",
+    "file": "pages/categories/bioinformatics/index.svelte-07bb1265.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-0ab6383e.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_index-4a02bcac.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-784e0ee9.js",
+    "file": "pages/categories/engineering/index.svelte-d93ad8fd.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-0ab6383e.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_index-4a02bcac.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-fdef7d86.js",
+    "file": "pages/categories/shorts/index.svelte-5e04648d.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-0ab6383e.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_index-4a02bcac.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-655278c3.js",
+    "file": "pages/categories/data/index.svelte-792ad1c9.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-0ab6383e.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_index-4a02bcac.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-99f81ece.js",
+    "file": "pages/categories/misc/index.svelte-7709b41a.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-0ab6383e.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_index-4a02bcac.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "__posts-0ccc0035.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js"
     ]
@@ -149,13 +149,13 @@
     ]
   },
   "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md": {
-    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-eaa8fd29.js",
+    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64838d3f.js",
     "src": "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js"
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js"
     ]
   },
   "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md": {
@@ -169,13 +169,13 @@
     ]
   },
   "src/routes/posts/js-quirks-sorting-array-of-numbers.md": {
-    "file": "pages/posts/js-quirks-sorting-array-of-numbers.md-89d9d3b5.js",
+    "file": "pages/posts/js-quirks-sorting-array-of-numbers.md-1cde26aa.js",
     "src": "src/routes/posts/js-quirks-sorting-array-of-numbers.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
       "__posts-0ccc0035.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js"
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js"
     ]
   },
   "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md": {
@@ -201,8 +201,8 @@
   "_vendor-e6930037.js": {
     "file": "chunks/vendor-e6930037.js"
   },
-  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js": {
-    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js": {
+    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -217,8 +217,8 @@
       "__posts-0ccc0035.js"
     ]
   },
-  "_js-quirks-sorting-array-of-numbers-7b0d77fd.js": {
-    "file": "chunks/js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+  "_js-quirks-sorting-array-of-numbers-72c534ec.js": {
+    "file": "chunks/js-quirks-sorting-array-of-numbers-72c534ec.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
@@ -247,12 +247,12 @@
       "_vendor-e6930037.js"
     ]
   },
-  "_index-0ab6383e.js": {
-    "file": "chunks/index-0ab6383e.js",
+  "_index-4a02bcac.js": {
+    "file": "chunks/index-4a02bcac.js",
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-04fbbc25.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-7b0d77fd.js",
+      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
       "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
       "_library-vs-framework-4d7e10dc.js",
       "_vendor-e6930037.js"
