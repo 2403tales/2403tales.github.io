@@ -1,7 +1,7 @@
 ---
 title: "Chromedriver v/s GeckoDriver: Dealing with PDF URLs"
 date: "11 August, 2022"
-categories: ["Web Scraping", "Selenium", "engineering", "data"]
+categories: ["Web Scraping", "Data Mining", "Selenium", "engineering", "data"]
 description: "How PDFs are handled by Chromedriver and Geckodriver in headless mode"
 author: "Prakash"
 ---

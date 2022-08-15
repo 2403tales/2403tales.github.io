@@ -5,7 +5,6 @@ categories: ["Frontend", "Javascript", "engineering"]
 description: "Annoying behaviour of JS while sorting array of numbers, and how to fix it."
 author: "Prakash"
 ---
-# JS Quirks: Sorting array of numbers
 
 **TL;DR:** If you’re trying to sort an array of numbers in JS, pass a comparison function. Otherwise, it will consider the datatype of elements as a `string` and will sort based on the first character (So basically, `12` will come before `2`). Here’s how you pass a comparison function
 
