@@ -17,7 +17,7 @@ idx.sort((a, b) => a - b) // Sorts in ascending order
 
 Imagine sitting on your chair, developing a UI for your client. Work is progressing at a steady pace, and you’re trying to figure out a way to optimize the rendering of a component.
 
-Suddenly it hits you that if you sort the array you’re sending to your component, then you might be able to reduce the rendering time and improve the UX simultaneously. So you fold your shirt and get started on the task.
+Suddenly it hits you that if you sort the array you’re sending to your component, then you might be able to reduce the rendering time and improve the UX simultaneously. So you fold your sleeves and get started on the task.
 
 ## Problem Statement
 
