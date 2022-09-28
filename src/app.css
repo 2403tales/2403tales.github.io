@@ -35,7 +35,7 @@
 		@apply p-8 italic font-semibold text-lg text-slate-300 rounded-xl;
 	}
 	html {
-		@apply leading-loose text-lg;
+		@apply leading-loose text-lg space-y-4;
 		@apply bg-neutral-900 text-gray-300 selection:bg-stone-100 selection:text-black;
 	}
 
