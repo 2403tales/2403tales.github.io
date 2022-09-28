@@ -10,6 +10,8 @@ Once in a while, I get an urge to write, and hence this blog. I am working on in
 
 I am originally from Ghazipur, UP, but based in Hyderabad nowadays. Prefer WFH (more like Work From Anywhere) over office. 
 
+You can reach me at [2403tales@protonmail.com](mailto:2403tales@protonmail.com)
+
 ## Some of my favourite quotes
 
 ### General philosophy of life
