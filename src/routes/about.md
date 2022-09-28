@@ -24,7 +24,7 @@ You can reach me at [2403tales@protonmail.com](mailto:2403tales@protonmail.com)
 
 ## Other interests
 
-I like to watch thriller series and study Mathematics and Physics in my free time. I also like to read Hindi poems. रश्मिरथी (Rashmirathi) and मधुशाला (Madhushala) are my favourites (at least as of now). Ordered पंचवटी (Panchvati) to read next. Recently, I have started taking an interest in travelling and exploring local food. I mostly post about those on my Instagram (As of now, it only has one post lol)
+I like to watch thriller series and study Mathematics and Physics in my free time. I also like to read Hindi poems. रश्मिरथी (Rashmirathi) and मधुशाला (Madhushala) are my favourites (at least as of now). Ordered पंचवटी (Panchvati) to read next. Recently, I have started taking an interest in travelling and exploring local food. I mostly post about those on my [Instagram](https://www.instagram.com/2403tales/) (As of now, it only has one post lol)
 
 Once in a while, I get an urge to write, and hence this blog. I am working on increasing my frequency of writing. Planning to release one blog post per week.
 
