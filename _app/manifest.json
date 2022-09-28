@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-b76557c9.js",
+    "file": "start-def24342.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -15,7 +15,7 @@
       "src/routes/categories/shorts/index.svelte",
       "src/routes/categories/data/index.svelte",
       "src/routes/categories/misc/index.svelte",
-      "src/routes/about.svelte",
+      "src/routes/about.md",
       "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
       "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
       "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
@@ -33,7 +33,7 @@
       "_vendor-e6930037.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-2d1fdb40.css"
+      "assets/pages/__layout.svelte-0ad86c01.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -146,9 +146,9 @@
       "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
-  "src/routes/about.svelte": {
-    "file": "pages/about.svelte-0595d6e8.js",
-    "src": "src/routes/about.svelte",
+  "src/routes/about.md": {
+    "file": "pages/about.md-1d25c7bc.js",
+    "src": "src/routes/about.md",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [

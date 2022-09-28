@@ -1,1 +1,0 @@
-import{S as a,i as o,s as n,N as d,d as l,M as e}from"../chunks/vendor-e6930037.js";function c(s){return{c(){this.h()},l(t){d('[data-svelte="svelte-106u8p8"]',document.head).forEach(l),this.h()},h(){document.title="About | 2403tales"},m:e,p:e,i:e,o:e,d:e}}class h extends a{constructor(t){super();o(this,t,null,c,n,{})}}export{h as default};
