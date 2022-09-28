@@ -47,7 +47,9 @@
       
     </div>
   </div>
-  <slot />
+  <div class="leading-relaxed space-y-4">
+    <slot />
+  </div>
 </div>
 
   
