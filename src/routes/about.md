@@ -1,8 +1,28 @@
-## $ whoami
+# $ whoami
 
+## Introduction
 Hi, my name is Prakash, and I am a software developer. My primary interests are in Data Engineering and Full Stack development, however I tend to stay in touch with all aspects of software engineering.
 
 I like to work with startups. My career started with [Aganitha](https://aganitha.com) in 2019. As of now (Sept 2022), I am working as Full Stack Data Scientist at Aganitha, and will soon be joining [Needle Digital](https://needle-digital.com) as Lead Engineer.
+
+You can reach me at [2403tales@protonmail.com](mailto:2403tales@protonmail.com)
+
+## Experienced in
+
+* Languages: `Python`, `JS`
+* Frameworks: 
+  * Frontend: `ReactJS`, `Svelte` (this blog is developed in Svelte)
+  * Web: `Django`, `DRF`, `Flask`, `FastAPI`
+  * Data Processing: `Vaex`
+  * Workflow Management: `Prefect`, `Cromwell`
+  * Automation: `Selenium`, `RPA-Python`
+  * Others: `Redux`, `Tailwind`, `Chakra-UI`
+* Databases: `Neo4J`, `Postgres`, `ElasticSearch`
+* Containerization: `Docker`, `Singularity`
+* Reverse Proxy: `Traefik`
+* Cloud Providers: `AWS`, `OVH`
+
+## Other interests
 
 I like to watch thriller series and study Mathematics and Physics in my free time. I also like to read Hindi poems. रश्मिरथी (Rashmirathi) and मधुशाला (Madhushala) are my favourites (at least as of now). Ordered पंचवटी (Panchvati) to read next. Recently, I have started taking an interest in travelling and exploring local food. I mostly post about those on my Instagram (As of now, it only has one post lol)
 
@@ -10,7 +30,6 @@ Once in a while, I get an urge to write, and hence this blog. I am working on in
 
 I am originally from Ghazipur, UP, but based in Hyderabad nowadays. Prefer WFH (more like Work From Anywhere) over office. 
 
-You can reach me at [2403tales@protonmail.com](mailto:2403tales@protonmail.com)
 
 ## Some of my favourite quotes
 
