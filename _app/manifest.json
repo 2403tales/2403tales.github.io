@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-60624c39.js",
+    "file": "start-b76557c9.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -16,11 +16,12 @@
       "src/routes/categories/data/index.svelte",
       "src/routes/categories/misc/index.svelte",
       "src/routes/about.svelte",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_python-functions-on-steroids-8b41b4e4.js",
+      "_library-vs-framework-979bb997.js"
     ]
   },
   "src/routes/__layout.svelte": {
@@ -32,7 +33,7 @@
       "_vendor-e6930037.js"
     ],
     "css": [
-      "assets/pages/__layout.svelte-e2223523.css"
+      "assets/pages/__layout.svelte-2d1fdb40.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -45,98 +46,104 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-f514460d.js",
+    "file": "pages/index.svelte-607197ca.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js",
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
   "src/routes/categories/bioinformatics/index.svelte": {
-    "file": "pages/categories/bioinformatics/index.svelte-07bb1265.js",
+    "file": "pages/categories/bioinformatics/index.svelte-fdd70d8a.js",
     "src": "src/routes/categories/bioinformatics/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-4a02bcac.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_index-f93caaef.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "src/routes/categories/engineering/index.svelte": {
-    "file": "pages/categories/engineering/index.svelte-d93ad8fd.js",
+    "file": "pages/categories/engineering/index.svelte-c0a529fc.js",
     "src": "src/routes/categories/engineering/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-4a02bcac.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_index-f93caaef.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "src/routes/categories/shorts/index.svelte": {
-    "file": "pages/categories/shorts/index.svelte-5e04648d.js",
+    "file": "pages/categories/shorts/index.svelte-5312cbd6.js",
     "src": "src/routes/categories/shorts/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-4a02bcac.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_index-f93caaef.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "src/routes/categories/data/index.svelte": {
-    "file": "pages/categories/data/index.svelte-792ad1c9.js",
+    "file": "pages/categories/data/index.svelte-f12fd6bd.js",
     "src": "src/routes/categories/data/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-4a02bcac.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_index-f93caaef.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "src/routes/categories/misc/index.svelte": {
-    "file": "pages/categories/misc/index.svelte-7709b41a.js",
+    "file": "pages/categories/misc/index.svelte-6376a799.js",
     "src": "src/routes/categories/misc/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "_index-4a02bcac.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "_index-f93caaef.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "src/routes/about.svelte": {
@@ -149,112 +156,131 @@
     ]
   },
   "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md": {
-    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-64838d3f.js",
+    "file": "pages/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md-c51d9349.js",
     "src": "src/routes/posts/chromedriver-vs-geckodriver-dealing-with-pdf-urls.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js",
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js"
+      "__posts-39c49aba.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js"
     ]
   },
   "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md": {
-    "file": "pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-b20db549.js",
+    "file": "pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-6800117f.js",
     "src": "src/routes/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js"
+      "__posts-39c49aba.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js"
     ]
   },
   "src/routes/posts/js-quirks-sorting-array-of-numbers.md": {
-    "file": "pages/posts/js-quirks-sorting-array-of-numbers.md-1cde26aa.js",
+    "file": "pages/posts/js-quirks-sorting-array-of-numbers.md-5ff6297b.js",
     "src": "src/routes/posts/js-quirks-sorting-array-of-numbers.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js"
+      "__posts-39c49aba.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js"
     ]
   },
   "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md": {
-    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-19946776.js",
+    "file": "pages/posts/leveraging-encodings-for-speeding-up-grep.md-11392338.js",
     "src": "src/routes/posts/leveraging-encodings-for-speeding-up-grep.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js"
+      "__posts-39c49aba.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js"
     ]
   },
   "src/routes/posts/library-vs-framework.md": {
-    "file": "pages/posts/library-vs-framework.md-9a8e12ee.js",
+    "file": "pages/posts/library-vs-framework.md-fbe085df.js",
     "src": "src/routes/posts/library-vs-framework.md",
     "isEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js",
-      "_library-vs-framework-4d7e10dc.js"
+      "__posts-39c49aba.js",
+      "_library-vs-framework-979bb997.js"
+    ]
+  },
+  "src/routes/posts/python-functions-on-steroids.md": {
+    "file": "pages/posts/python-functions-on-steroids.md-7705fe33.js",
+    "src": "src/routes/posts/python-functions-on-steroids.md",
+    "isEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-39c49aba.js",
+      "_python-functions-on-steroids-8b41b4e4.js"
     ]
   },
   "_vendor-e6930037.js": {
     "file": "chunks/vendor-e6930037.js"
   },
-  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js": {
-    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
+  "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js": {
+    "file": "chunks/chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
-  "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js": {
-    "file": "chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
+  "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js": {
+    "file": "chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
-  "_js-quirks-sorting-array-of-numbers-72c534ec.js": {
-    "file": "chunks/js-quirks-sorting-array-of-numbers-72c534ec.js",
+  "_js-quirks-sorting-array-of-numbers-0e4f6d31.js": {
+    "file": "chunks/js-quirks-sorting-array-of-numbers-0e4f6d31.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
-  "_leveraging-encodings-for-speeding-up-grep-3f66b969.js": {
-    "file": "chunks/leveraging-encodings-for-speeding-up-grep-3f66b969.js",
+  "_leveraging-encodings-for-speeding-up-grep-561341ca.js": {
+    "file": "chunks/leveraging-encodings-for-speeding-up-grep-561341ca.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
-  "_library-vs-framework-4d7e10dc.js": {
-    "file": "chunks/library-vs-framework-4d7e10dc.js",
+  "_library-vs-framework-979bb997.js": {
+    "file": "chunks/library-vs-framework-979bb997.js",
     "isDynamicEntry": true,
     "imports": [
       "_vendor-e6930037.js",
-      "__posts-0ccc0035.js"
+      "__posts-39c49aba.js"
     ]
   },
-  "__posts-0ccc0035.js": {
-    "file": "chunks/_posts-0ccc0035.js",
+  "_python-functions-on-steroids-8b41b4e4.js": {
+    "file": "chunks/python-functions-on-steroids-8b41b4e4.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-e6930037.js",
+      "__posts-39c49aba.js"
+    ]
+  },
+  "__posts-39c49aba.js": {
+    "file": "chunks/_posts-39c49aba.js",
     "imports": [
       "_vendor-e6930037.js"
     ]
   },
-  "_index-4a02bcac.js": {
-    "file": "chunks/index-4a02bcac.js",
+  "_index-f93caaef.js": {
+    "file": "chunks/index-f93caaef.js",
     "imports": [
-      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-21224025.js",
-      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js",
-      "_js-quirks-sorting-array-of-numbers-72c534ec.js",
-      "_leveraging-encodings-for-speeding-up-grep-3f66b969.js",
-      "_library-vs-framework-4d7e10dc.js",
+      "_chromedriver-vs-geckodriver-dealing-with-pdf-urls-8f0f0d77.js",
+      "_efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js",
+      "_js-quirks-sorting-array-of-numbers-0e4f6d31.js",
+      "_leveraging-encodings-for-speeding-up-grep-561341ca.js",
+      "_library-vs-framework-979bb997.js",
+      "_python-functions-on-steroids-8b41b4e4.js",
       "_vendor-e6930037.js"
     ]
   }

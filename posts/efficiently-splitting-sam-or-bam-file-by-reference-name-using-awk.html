@@ -6,13 +6,13 @@
 		<link rel="stylesheet" href="../css/prism.css"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta http-equiv="content-security-policy" content=""><title>Efficiently Splitting SAM/BAM file by reference name using awk</title><meta name="description" content="An article explaining how to efficiently split a SAM/BAM file using awk" data-svelte="svelte-t80vtw">
-	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-e2223523.css">
-	<link rel="modulepreload" href="/_app/start-60624c39.js">
+	<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-2d1fdb40.css">
+	<link rel="modulepreload" href="/_app/start-b76557c9.js">
 	<link rel="modulepreload" href="/_app/chunks/vendor-e6930037.js">
 	<link rel="modulepreload" href="/_app/pages/__layout.svelte-8b08daee.js">
-	<link rel="modulepreload" href="/_app/pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-b20db549.js">
-	<link rel="modulepreload" href="/_app/chunks/_posts-0ccc0035.js">
-	<link rel="modulepreload" href="/_app/chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-54dbc224.js">
+	<link rel="modulepreload" href="/_app/pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-6800117f.js">
+	<link rel="modulepreload" href="/_app/chunks/_posts-39c49aba.js">
+	<link rel="modulepreload" href="/_app/chunks/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk-31b73929.js">
 	</head>
 	<body>
 		<div>
@@ -39,7 +39,7 @@
           <p class="text-gray-400">11 March, 2022</p></div></div>
       <h1>Efficiently Splitting SAM/BAM file by reference name using awk</h1>
       <div class="flex text-sm mt-2"><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">GNU Tools</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">shorts</p><p class="p-1 px-1 mr-2 bg-emerald-500 text-black rounded-xl">bioinformatics</p></div></div></div>
-  <h2>Target audience</h2>
+  <div class="leading-relaxed space-y-4"><h2>Target audience</h2>
 <ul><li>You must know what SAM/BAM file looks like</li>
 <li>You should know how <code>|</code> (pipe) works in <code>bash</code></li>
 <li>You should know how <code>&gt;</code> (output redirection) works in <code>bash</code></li></ul>
@@ -86,13 +86,13 @@ samtools view <span class="token variable">$&#123;samfile&#125;</span> <span cla
 <li>All records where <code>$3</code> is <code>ref2</code> will be written to a file named <code>ref2.sam</code>.</li></ul>
 <h2>Benchmarks</h2>
 <ul><li>It takes ~45 minutes to split a BAM file of 61GB on Intel® Xeon® E5-2698 v3, having clock speed 2.3GHz and turbo speed 3.0GHz. Number of cores doesn’t matter, as <code>awk</code> uses only one core at a time.</li>
-<li>Your I/O device might make a difference in runtime. SSDs will give you lower runtime as compared to traditional HDDs.</li></ul></div></div>
+<li>Your I/O device might make a difference in runtime. SSDs will give you lower runtime as compared to traditional HDDs.</li></ul></div></div></div>
 
 
-		<script type="module" data-hydrate="1vc8k17">
-		import { start } from "/_app/start-60624c39.js";
+		<script type="module" data-hydrate="1b5qqm4">
+		import { start } from "/_app/start-b76557c9.js";
 		start({
-			target: document.querySelector('[data-hydrate="1vc8k17"]').parentNode,
+			target: document.querySelector('[data-hydrate="1b5qqm4"]').parentNode,
 			paths: {"base":"","assets":""},
 			session: {},
 			route: true,
@@ -103,7 +103,7 @@ samtools view <span class="token variable">$&#123;samfile&#125;</span> <span cla
 				error: null,
 				nodes: [
 					import("/_app/pages/__layout.svelte-8b08daee.js"),
-						import("/_app/pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-b20db549.js")
+						import("/_app/pages/posts/efficiently-splitting-sam-or-bam-file-by-reference-name-using-awk.md-6800117f.js")
 				],
 				params: {}
 			}
